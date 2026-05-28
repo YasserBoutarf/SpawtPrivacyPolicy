@@ -5,215 +5,381 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spawt Privacy Policy</title>
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      max-width: 720px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
+    :root {
+      --text: #111;
+      --text-muted: #555;
+      --text-subtle: #777;
+      --border: #e8e8e8;
+      --bg: #fdfdfd;
+      --accent: #0a0a0a;
+      --link: #1a5fb4;
+      --callout-bg: #f4f7fb;
+      --callout-border: #1a5fb4;
     }
-    h1 { border-bottom: 1px solid #eee; padding-bottom: 8px; }
-    h2 { margin-top: 32px; }
-    a { color: #0066cc; }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 64px 24px 120px;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0 0 12px;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 56px 0 16px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      letter-spacing: -0.015em;
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 32px 0 10px;
+      letter-spacing: -0.01em;
+    }
+
+    p { margin: 12px 0; }
+    ul { padding-left: 22px; margin: 14px 0; }
+    li { margin: 8px 0; padding-left: 4px; }
+    li::marker { color: var(--text-subtle); }
+    strong { font-weight: 600; color: var(--accent); }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+    }
+    a:hover { border-bottom-color: var(--link); }
+
+    .meta {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin: 0 0 36px;
+      padding-bottom: 28px;
+      border-bottom: 2px solid var(--accent);
+    }
+    .meta span + span { margin-left: 16px; }
+
+    .intro {
+      font-size: 17px;
+      color: var(--text-muted);
+    }
+
+    .toc {
+      margin: 32px 0 48px;
+      padding: 20px 24px;
+      background: #f8f8f8;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .toc h4 {
+      margin: 0 0 12px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-subtle);
+    }
+    .toc ol {
+      margin: 0;
+      padding-left: 20px;
+      columns: 2;
+      column-gap: 32px;
+      font-size: 15px;
+    }
+    .toc li { margin: 4px 0; padding: 0; }
+    .toc a { color: var(--text); }
+    .toc a:hover { color: var(--link); }
+
+    .callout {
+      margin: 20px 0;
+      padding: 16px 20px;
+      background: var(--callout-bg);
+      border-left: 3px solid var(--callout-border);
+      border-radius: 4px;
+      font-size: 15px;
+    }
+    .callout p { margin: 0; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 15px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    th {
+      text-align: left;
+      padding: 12px 14px;
+      background: #f4f4f4;
+      font-weight: 600;
+      font-size: 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--accent);
+    }
+    td {
+      padding: 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    td:first-child { font-weight: 600; white-space: nowrap; width: 22%; }
+
+    footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      color: var(--text-subtle);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 40px 20px 80px; font-size: 15px; }
+      h1 { font-size: 28px; }
+      h2 { font-size: 19px; margin-top: 44px; }
+      .toc ol { columns: 1; }
+      table { font-size: 14px; }
+      th, td { padding: 10px; }
+      td:first-child { white-space: normal; width: auto; }
+    }
   </style>
 </head>
 <body>
-  <h1>SpotSwipe Privacy Policy</h1>
-  <p><em>Last updated: May 27, 2026</em></p>
-  <p>Spawt ("we", "our", or "us") respects your privacy. This policy explains what we collect and how we use it.</p>
-  # Spawt Privacy Policy
 
-**Effective Date:** May 27, 2026
-**Last Updated:** May 27, 2026
-
-This Privacy Policy explains how Yasser Boutarf, an individual developer ("Spawt," "we," "us," or "our"), collects, uses, shares, and protects your information when you use the Spawt mobile application and related services (collectively, the "Services").
-
-By using Spawt, you agree to the collection and use of information in accordance with this Policy. If you do not agree, please do not use the Services.
-
----
-
-## 1. Who We Are
-
-Spawt is a mobile app that helps you discover places, plan outings, and coordinate them with the people you go out with. You swipe through nearby spots, build plans, share them so friends can vote, see each other on a map during a live outing, and save photos and memories afterward.
-
----
-
-## 2. Information We Collect
-
-We collect the following categories of information.
-
-### 2.1 Information You Provide
-
-**Account information.** When you create an account, we collect your email address and a password (for email sign-up), or an identity token and basic profile details (name, email) shared by Apple or Google when you use social sign-in. You may also use Spawt as an anonymous guest to vote on a shared plan — in that case we create a temporary anonymous account and store only the display name you enter.
-
-**Profile information.** Your display name, optional username/handle, profile photo (avatar), home city, pronouns, and a short bio.
-
-**Onboarding and preference information.** During onboarding and in your settings, you may provide:
-- Who you go out with and why ("use cases": dating, friends, family, coworkers, solo)
-- Your gender, and — if you indicate you're dating — your partner's gender and relationship type
-- Preferred categories (food, drinks, activities, nightlife), vibes, and specific tastes (e.g., cuisines, venue types)
-- Budget range and dietary restrictions
-- Desired search distance and your approximate or precise home location (latitude/longitude)
-- Preferred outing days and time slots, group size, and "must-have" amenities
-- How often you go out, planning pain points, how you heard about us (referral source/code), and any rating or feedback you provide
-
-**Plans and activity.** The plans and itineraries you build, the venues ("stops") you add, scheduled dates and times, group size, and budget. We also record your **swipe history** — the spots you like or pass on — to personalize what we show you.
-
-**Group voting.** When you share a plan for friends to vote on, we store each voter's chosen name and their votes. Voters do not need a full account.
-
-**Memories and photos.** Photos you capture or upload to a plan's shared album, along with any captions, image dimensions, and the time the photo was taken. Profile and album photos are stored in our cloud file storage. **Note:** profile avatar images are stored at a publicly accessible URL.
-
-**Companions.** People you add as co-planners — either a name you type, or a linked Spawt account when you connect with someone via QR code. We store their display name, an optional initial/color, and the relationship role you assign (partner, friend, family, coworker).
-
-**Communications.** If you contact us for support or feedback, we keep that correspondence.
-
-### 2.2 Information We Collect Automatically
-
-**Location information.** With your permission, we use your device location to find spots near you. During a live outing ("Live Mode"), and only while you choose to share, we collect your **precise GPS location** (latitude, longitude, accuracy, and heading) so plan participants can see each other on a map. These live-location records are **ephemeral and automatically expire one hour** after your last update.
-
-**Device and usage information.** Basic technical information necessary to operate the app and diagnose problems, and your notification preferences and device time zone.
-
-> **Analytics:** Spawt does **not** currently send your activity to any third-party analytics or crash-reporting service. We use limited internal, on-device diagnostics during development only. If we add an analytics or crash-reporting provider in the future, we will update this Policy and identify the provider before doing so.
-
-### 2.3 Information From Third Parties
-
-**Social sign-in providers.** If you sign in with Apple or Google, we receive a verified identity token and limited profile details (such as your name and email) according to your settings with those providers.
-
----
-
-## 3. App Permissions We Request
-
-Spawt asks for the following device permissions. You can grant or revoke any of these at any time in your device Settings.
-
-| Permission | Why we ask | What we do with it |
-|---|---|---|
-| **Location (When In Use)** | To find date spots and places near you, and to share your live location with participants during an active plan. | Used to search nearby venues and, only when you opt in, to show your position to others in Live Mode (records expire after 1 hour). |
-| **Contacts** | So you can quickly add friends to a plan. | We use only the name you select to attach a companion to a plan. **We do not upload your address book or store your contacts list.** |
-| **Camera** | To capture moments during your plans and to scan QR codes that join shared albums or link companions. | Photos you take are added to the relevant plan album; QR scans are used only to join an album or connect with another user. |
-| **Photo Library** | To let you choose an existing photo as your profile picture or add it to an album. | We upload only the specific photo you select. |
-
-We request access only to data that is relevant to the feature you are using, and we collect only what is needed to provide it. Declining a permission only disables the related feature; the rest of Spawt continues to work, and we never require you to grant a permission as a condition of using the app.
-
----
-
-## 4. How We Use Your Information
-
-We use your information to:
-
-- Provide, operate, and maintain the Services — including creating your account, building and saving plans, running group votes, and powering Live Mode and shared albums
-- Personalize your experience — using your preferences, swipe history, and location to surface relevant spots and sensible defaults
-- Enable collaboration — letting you share plans, vote, link companions, and coordinate during outings
-- Communicate with you — sending account and service notifications according to your notification settings, and responding to your support requests
-- Maintain safety and security — detecting, preventing, and addressing fraud, abuse, and technical issues
-- Improve the Services — understanding how features are used so we can fix problems and build better experiences
-- Comply with legal obligations and enforce our terms
-
----
-
-## 5. How We Share Your Information
-
-We **do not sell** your personal information. We **do not use it for advertising or targeted advertising**, we do not serve third-party ads, and we do not use advertising identifiers. We **do not track you across other companies' apps or websites** — because of this, Spawt does not present an App Tracking Transparency prompt. We **do not share your personal information with third-party artificial-intelligence services.** We share information only as described below.
-
-### 5.1 With Other Users
-
-By design, Spawt is collaborative. The following is visible to people you choose to share with:
-- Plans you share become viewable by anyone with the share link, including the venues, schedule, and details in them.
-- Your votes and the name you submit are visible to the plan's creator and other voters.
-- Photos and captions you add to a shared album are visible to that plan's participants.
-- During Live Mode, your real-time location is visible to other participants while you are sharing.
-- Companions you link can see shared planning activity and stats with you.
-
-Please share thoughtfully — content you post to shared or public-facing parts of the Services may be seen by others.
-
-### 5.2 With Service Providers
-
-We share information with vendors who process it on our behalf, under contract and only to provide their services to us:
-
-- **Supabase** — our backend platform, which provides authentication, database, file storage, and realtime features. Your account, profile, preferences, plans, swipes, votes, memories, photos, and live-location data are stored here. Supabase hosts our data on cloud infrastructure (Amazon Web Services).
-- **Google** — we use the **Google Places API** to find and display nearby venues, **Google Sign-In** to authenticate you if you choose it, and **Google App Check** to protect our backend from abuse. Searching for spots involves sending location/search parameters to Google.
-- **Apple** — we use **Sign in with Apple** to authenticate you if you choose it.
-
-We require each of these service providers, by contract, to safeguard your information, to use it only to perform services for us, and to provide the same or an equal level of protection for your personal information as described in this Privacy Policy.
-
-### 5.3 For Legal Reasons
-
-We may disclose information if we believe in good faith it is necessary to comply with a law, regulation, legal process, or governmental request; to enforce our terms; or to protect the rights, property, or safety of Spawt, our users, or the public.
-
-### 5.4 Business Transfers
-
-If we are involved in a merger, acquisition, financing, or sale of assets, your information may be transferred as part of that transaction. We will notify you of any change in ownership or use of your personal information.
-
-### 5.5 Aggregated and De-Identified Data
-
-We may create and use aggregated or de-identified data that can no longer reasonably identify you. For example, our venue-discovery cache stores place results keyed to approximate geographic areas — not to individual users — so the app loads faster for everyone.
-
----
-
-## 6. Data Retention
-
-We keep your personal information for as long as your account is active or as needed to provide the Services, comply with our legal obligations, resolve disputes, and enforce our agreements.
-
-- **Live-location records** are ephemeral and **automatically expire one hour** after the last update.
-- **Cached venue-discovery results** are de-identified and refreshed on a rolling basis (cleared after approximately 24 hours).
-- When you delete a plan, its associated stops, votes, and album content are deleted with it.
-- When you request account deletion (see Section 7), we delete or de-identify your personal information, except where we must retain it to meet a legal obligation.
-
----
-
-## 7. Your Rights and Choices
-
-You have the following choices regardless of where you live, and additional rights may apply depending on your jurisdiction (such as the GDPR in the EEA/UK or the CCPA/CPRA in California): the right to access, correct, delete, and obtain a copy of your personal information, and to object to or restrict certain processing.
-
-**Access and update.** You can view and edit your profile, preferences, and notification settings directly in the app.
-
-**Account and data deletion.** You can permanently delete your account at any time from within the app: open the **Profile** tab and tap **Delete account**. This irreversibly erases your account and the personal information associated with it — including your profile, preferences, plans, swipe history, votes, photos, and memories — except for any limited information we are required to retain to meet a legal obligation. You may also email us at **boutarfyasser6@gmail.com** to request deletion, and we will process your request within a reasonable time.
-
-**Disconnecting social sign-in.** If you signed in with Apple or Google, signing out or deleting your account disconnects Spawt from that provider. We use Apple and Google sign-in only to authenticate you; we do not post to, or read content from, your Apple or Google account, and we do not store your social-login credentials off your device.
-
-**Withdrawing consent.** You can withdraw consent for any data collection at any time by turning off the related device permission (see below), adjusting your notification settings, or deleting your account.
-
-**Notification settings.** You can control which notifications you receive (plan reminders, friend invites, vote alerts, Live Mode pings, memory prompts, weekly digest, and "year ago today"), as well as quiet hours, in the app.
-
-**Device permissions.** You can revoke location, contacts, camera, or photo access at any time in your device Settings.
-
-**Exercising your rights.** To make any privacy request, email **boutarfyasser6@gmail.com** and tell us what you'd like to do. We may need to verify your identity before fulfilling certain requests. You will not be discriminated against for exercising your rights.
-
----
-
-## 8. Data Security
-
-We use reasonable technical and organizational safeguards designed to protect your information, including encrypted connections, authenticated access, and database row-level security that restricts each user's data to that user and the people they share with. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.
-
----
-
-## 9. Children's Privacy
-
-Spawt is intended for users **18 years of age and older**, and includes content related to dating, nightlife, and venues that may serve alcohol. We do not knowingly collect personal information from anyone under 18. If you are under 18, please do not use the Services. If we learn that we have collected personal information from someone under 18, we will delete that information and the associated account. If you believe a minor has provided us information, contact us at **boutarfyasser6@gmail.com**.
-
----
-
-## 10. International Data Transfers
-
-We and our service providers may store and process your information in the United States and other countries that may have different data-protection laws than your own. Where required, we take steps to ensure appropriate safeguards are in place for such transfers. By using the Services, you understand your information may be transferred to and processed in these locations.
-
----
-
-## 11. Changes to This Policy
-
-We may update this Privacy Policy from time to time. When we make material changes, we will revise the "Last Updated" date above and, where appropriate, notify you in the app. Your continued use of the Services after an update means you accept the revised Policy.
-
----
-
-## 12. Contact Us
-
-If you have questions, concerns, or requests regarding this Privacy Policy or your personal information, contact us at:
-
-**Yasser Boutarf** (operator of Spawt)
-Email: **boutarfyasser6@gmail.com**
-Location: Boston, Massachusetts, USA (full mailing address available on request)
-
-This Policy is governed by the laws of the Commonwealth of Massachusetts, United States, without regard to its conflict-of-laws principles.
+  <h1>Spawt Privacy Policy</h1>
+  <p class="meta">
+    <span><strong>Effective Date:</strong> May 27, 2026</span>
+    <span><strong>Last Updated:</strong> May 27, 2026</span>
+  </p>
+
+  <p class="intro">
+    This Privacy Policy explains how Yasser Boutarf, an individual developer ("Spawt," "we," "us," or "our"), collects, uses, shares, and protects your information when you use the Spawt mobile application and related services (collectively, the "Services").
+  </p>
+
+  <p class="intro">
+    By using Spawt, you agree to the collection and use of information in accordance with this Policy. If you do not agree, please do not use the Services.
+  </p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <h4>Contents</h4>
+    <ol>
+      <li><a href="#who-we-are">Who We Are</a></li>
+      <li><a href="#information-we-collect">Information We Collect</a></li>
+      <li><a href="#permissions">App Permissions We Request</a></li>
+      <li><a href="#how-we-use">How We Use Your Information</a></li>
+      <li><a href="#sharing">How We Share Your Information</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#your-rights">Your Rights and Choices</a></li>
+      <li><a href="#security">Data Security</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#transfers">International Data Transfers</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="who-we-are">1. Who We Are</h2>
+  <p>Spawt is a mobile app that helps you discover places, plan outings, and coordinate them with the people you go out with. You swipe through nearby spots, build plans, share them so friends can vote, see each other on a map during a live outing, and save photos and memories afterward.</p>
+
+  <h2 id="information-we-collect">2. Information We Collect</h2>
+  <p>We collect the following categories of information.</p>
+
+  <h3>2.1 Information You Provide</h3>
+
+  <p><strong>Account information.</strong> When you create an account, we collect your email address and a password (for email sign-up), or an identity token and basic profile details (name, email) shared by Apple or Google when you use social sign-in. You may also use Spawt as an anonymous guest to vote on a shared plan — in that case we create a temporary anonymous account and store only the display name you enter.</p>
+
+  <p><strong>Profile information.</strong> Your display name, optional username/handle, profile photo (avatar), home city, pronouns, and a short bio.</p>
+
+  <p><strong>Onboarding and preference information.</strong> During onboarding and in your settings, you may provide:</p>
+  <ul>
+    <li>Who you go out with and why ("use cases": dating, friends, family, coworkers, solo)</li>
+    <li>Your gender, and — if you indicate you're dating — your partner's gender and relationship type</li>
+    <li>Preferred categories (food, drinks, activities, nightlife), vibes, and specific tastes (e.g., cuisines, venue types)</li>
+    <li>Budget range and dietary restrictions</li>
+    <li>Desired search distance and your approximate or precise home location (latitude/longitude)</li>
+    <li>Preferred outing days and time slots, group size, and "must-have" amenities</li>
+    <li>How often you go out, planning pain points, how you heard about us (referral source/code), and any rating or feedback you provide</li>
+  </ul>
+
+  <p><strong>Plans and activity.</strong> The plans and itineraries you build, the venues ("stops") you add, scheduled dates and times, group size, and budget. We also record your <strong>swipe history</strong> — the spots you like or pass on — to personalize what we show you.</p>
+
+  <p><strong>Group voting.</strong> When you share a plan for friends to vote on, we store each voter's chosen name and their votes. Voters do not need a full account.</p>
+
+  <p><strong>Memories and photos.</strong> Photos you capture or upload to a plan's shared album, along with any captions, image dimensions, and the time the photo was taken. Profile and album photos are stored in our cloud file storage. <strong>Note:</strong> profile avatar images are stored at a publicly accessible URL.</p>
+
+  <p><strong>Companions.</strong> People you add as co-planners — either a name you type, or a linked Spawt account when you connect with someone via QR code. We store their display name, an optional initial/color, and the relationship role you assign (partner, friend, family, coworker).</p>
+
+  <p><strong>Communications.</strong> If you contact us for support or feedback, we keep that correspondence.</p>
+
+  <h3>2.2 Information We Collect Automatically</h3>
+
+  <p><strong>Location information.</strong> With your permission, we use your device location to find spots near you. During a live outing ("Live Mode"), and only while you choose to share, we collect your <strong>precise GPS location</strong> (latitude, longitude, accuracy, and heading) so plan participants can see each other on a map. These live-location records are <strong>ephemeral and automatically expire one hour</strong> after your last update.</p>
+
+  <p><strong>Device and usage information.</strong> Basic technical information necessary to operate the app and diagnose problems, and your notification preferences and device time zone.</p>
+
+  <div class="callout">
+    <p><strong>Analytics:</strong> Spawt does <strong>not</strong> currently send your activity to any third-party analytics or crash-reporting service. We use limited internal, on-device diagnostics during development only. If we add an analytics or crash-reporting provider in the future, we will update this Policy and identify the provider before doing so.</p>
+  </div>
+
+  <h3>2.3 Information From Third Parties</h3>
+
+  <p><strong>Social sign-in providers.</strong> If you sign in with Apple or Google, we receive a verified identity token and limited profile details (such as your name and email) according to your settings with those providers.</p>
+
+  <h2 id="permissions">3. App Permissions We Request</h2>
+  <p>Spawt asks for the following device permissions. You can grant or revoke any of these at any time in your device Settings.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Permission</th>
+        <th>Why we ask</th>
+        <th>What we do with it</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Location <span style="font-weight:400;color:var(--text-muted)">(When In Use)</span></td>
+        <td>To find date spots and places near you, and to share your live location with participants during an active plan.</td>
+        <td>Used to search nearby venues and, only when you opt in, to show your position to others in Live Mode (records expire after 1 hour).</td>
+      </tr>
+      <tr>
+        <td>Contacts</td>
+        <td>So you can quickly add friends to a plan.</td>
+        <td>We use only the name you select to attach a companion to a plan. <strong>We do not upload your address book or store your contacts list.</strong></td>
+      </tr>
+      <tr>
+        <td>Camera</td>
+        <td>To capture moments during your plans and to scan QR codes that join shared albums or link companions.</td>
+        <td>Photos you take are added to the relevant plan album; QR scans are used only to join an album or connect with another user.</td>
+      </tr>
+      <tr>
+        <td>Photo Library</td>
+        <td>To let you choose an existing photo as your profile picture or add it to an album.</td>
+        <td>We upload only the specific photo you select.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>We request access only to data that is relevant to the feature you are using, and we collect only what is needed to provide it. Declining a permission only disables the related feature; the rest of Spawt continues to work, and we never require you to grant a permission as a condition of using the app.</p>
+
+  <h2 id="how-we-use">4. How We Use Your Information</h2>
+  <p>We use your information to:</p>
+  <ul>
+    <li>Provide, operate, and maintain the Services — including creating your account, building and saving plans, running group votes, and powering Live Mode and shared albums</li>
+    <li>Personalize your experience — using your preferences, swipe history, and location to surface relevant spots and sensible defaults</li>
+    <li>Enable collaboration — letting you share plans, vote, link companions, and coordinate during outings</li>
+    <li>Communicate with you — sending account and service notifications according to your notification settings, and responding to your support requests</li>
+    <li>Maintain safety and security — detecting, preventing, and addressing fraud, abuse, and technical issues</li>
+    <li>Improve the Services — understanding how features are used so we can fix problems and build better experiences</li>
+    <li>Comply with legal obligations and enforce our terms</li>
+  </ul>
+
+  <h2 id="sharing">5. How We Share Your Information</h2>
+  <p>We <strong>do not sell</strong> your personal information. We <strong>do not use it for advertising or targeted advertising</strong>, we do not serve third-party ads, and we do not use advertising identifiers. We <strong>do not track you across other companies' apps or websites</strong> — because of this, Spawt does not present an App Tracking Transparency prompt. We <strong>do not share your personal information with third-party artificial-intelligence services.</strong> We share information only as described below.</p>
+
+  <h3>5.1 With Other Users</h3>
+  <p>By design, Spawt is collaborative. The following is visible to people you choose to share with:</p>
+  <ul>
+    <li>Plans you share become viewable by anyone with the share link, including the venues, schedule, and details in them.</li>
+    <li>Your votes and the name you submit are visible to the plan's creator and other voters.</li>
+    <li>Photos and captions you add to a shared album are visible to that plan's participants.</li>
+    <li>During Live Mode, your real-time location is visible to other participants while you are sharing.</li>
+    <li>Companions you link can see shared planning activity and stats with you.</li>
+  </ul>
+  <p>Please share thoughtfully — content you post to shared or public-facing parts of the Services may be seen by others.</p>
+
+  <h3>5.2 With Service Providers</h3>
+  <p>We share information with vendors who process it on our behalf, under contract and only to provide their services to us:</p>
+  <ul>
+    <li><strong>Supabase</strong> — our backend platform, which provides authentication, database, file storage, and realtime features. Your account, profile, preferences, plans, swipes, votes, memories, photos, and live-location data are stored here. Supabase hosts our data on cloud infrastructure (Amazon Web Services).</li>
+    <li><strong>Google</strong> — we use the <strong>Google Places API</strong> to find and display nearby venues, <strong>Google Sign-In</strong> to authenticate you if you choose it, and <strong>Google App Check</strong> to protect our backend from abuse. Searching for spots involves sending location/search parameters to Google.</li>
+    <li><strong>Apple</strong> — we use <strong>Sign in with Apple</strong> to authenticate you if you choose it.</li>
+  </ul>
+  <p>We require each of these service providers, by contract, to safeguard your information, to use it only to perform services for us, and to provide the same or an equal level of protection for your personal information as described in this Privacy Policy.</p>
+
+  <h3>5.3 For Legal Reasons</h3>
+  <p>We may disclose information if we believe in good faith it is necessary to comply with a law, regulation, legal process, or governmental request; to enforce our terms; or to protect the rights, property, or safety of Spawt, our users, or the public.</p>
+
+  <h3>5.4 Business Transfers</h3>
+  <p>If we are involved in a merger, acquisition, financing, or sale of assets, your information may be transferred as part of that transaction. We will notify you of any change in ownership or use of your personal information.</p>
+
+  <h3>5.5 Aggregated and De-Identified Data</h3>
+  <p>We may create and use aggregated or de-identified data that can no longer reasonably identify you. For example, our venue-discovery cache stores place results keyed to approximate geographic areas — not to individual users — so the app loads faster for everyone.</p>
+
+  <h2 id="retention">6. Data Retention</h2>
+  <p>We keep your personal information for as long as your account is active or as needed to provide the Services, comply with our legal obligations, resolve disputes, and enforce our agreements.</p>
+  <ul>
+    <li><strong>Live-location records</strong> are ephemeral and <strong>automatically expire one hour</strong> after the last update.</li>
+    <li><strong>Cached venue-discovery results</strong> are de-identified and refreshed on a rolling basis (cleared after approximately 24 hours).</li>
+    <li>When you delete a plan, its associated stops, votes, and album content are deleted with it.</li>
+    <li>When you request account deletion (see Section 7), we delete or de-identify your personal information, except where we must retain it to meet a legal obligation.</li>
+  </ul>
+
+  <h2 id="your-rights">7. Your Rights and Choices</h2>
+  <p>You have the following choices regardless of where you live, and additional rights may apply depending on your jurisdiction (such as the GDPR in the EEA/UK or the CCPA/CPRA in California): the right to access, correct, delete, and obtain a copy of your personal information, and to object to or restrict certain processing.</p>
+
+  <p><strong>Access and update.</strong> You can view and edit your profile, preferences, and notification settings directly in the app.</p>
+
+  <p><strong>Account and data deletion.</strong> You can permanently delete your account at any time from within the app: open the <strong>Profile</strong> tab and tap <strong>Delete account</strong>. This irreversibly erases your account and the personal information associated with it — including your profile, preferences, plans, swipe history, votes, photos, and memories — except for any limited information we are required to retain to meet a legal obligation. You may also email us at <a href="mailto:boutarfyasser6@gmail.com">boutarfyasser6@gmail.com</a> to request deletion, and we will process your request within a reasonable time.</p>
+
+  <p><strong>Disconnecting social sign-in.</strong> If you signed in with Apple or Google, signing out or deleting your account disconnects Spawt from that provider. We use Apple and Google sign-in only to authenticate you; we do not post to, or read content from, your Apple or Google account, and we do not store your social-login credentials off your device.</p>
+
+  <p><strong>Withdrawing consent.</strong> You can withdraw consent for any data collection at any time by turning off the related device permission (see below), adjusting your notification settings, or deleting your account.</p>
+
+  <p><strong>Notification settings.</strong> You can control which notifications you receive (plan reminders, friend invites, vote alerts, Live Mode pings, memory prompts, weekly digest, and "year ago today"), as well as quiet hours, in the app.</p>
+
+  <p><strong>Device permissions.</strong> You can revoke location, contacts, camera, or photo access at any time in your device Settings.</p>
+
+  <p><strong>Exercising your rights.</strong> To make any privacy request, email <a href="mailto:boutarfyasser6@gmail.com">boutarfyasser6@gmail.com</a> and tell us what you'd like to do. We may need to verify your identity before fulfilling certain requests. You will not be discriminated against for exercising your rights.</p>
+
+  <h2 id="security">8. Data Security</h2>
+  <p>We use reasonable technical and organizational safeguards designed to protect your information, including encrypted connections, authenticated access, and database row-level security that restricts each user's data to that user and the people they share with. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
+
+  <h2 id="children">9. Children's Privacy</h2>
+  <p>Spawt is intended for users <strong>18 years of age and older</strong>, and includes content related to dating, nightlife, and venues that may serve alcohol. We do not knowingly collect personal information from anyone under 18. If you are under 18, please do not use the Services. If we learn that we have collected personal information from someone under 18, we will delete that information and the associated account. If you believe a minor has provided us information, contact us at <a href="mailto:boutarfyasser6@gmail.com">boutarfyasser6@gmail.com</a>.</p>
+
+  <h2 id="transfers">10. International Data Transfers</h2>
+  <p>We and our service providers may store and process your information in the United States and other countries that may have different data-protection laws than your own. Where required, we take steps to ensure appropriate safeguards are in place for such transfers. By using the Services, you understand your information may be transferred to and processed in these locations.</p>
+
+  <h2 id="changes">11. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. When we make material changes, we will revise the "Last Updated" date above and, where appropriate, notify you in the app. Your continued use of the Services after an update means you accept the revised Policy.</p>
+
+  <h2 id="contact">12. Contact Us</h2>
+  <p>If you have questions, concerns, or requests regarding this Privacy Policy or your personal information, contact us at:</p>
+  <p>
+    <strong>Yasser Boutarf</strong> (operator of Spawt)<br>
+    Email: <a href="mailto:boutarfyasser6@gmail.com">boutarfyasser6@gmail.com</a><br>
+    Location: Boston, Massachusetts, USA (full mailing address available on request)
+  </p>
+  <p>This Policy is governed by the laws of the Commonwealth of Massachusetts, United States, without regard to its conflict-of-laws principles.</p>
+
+  <footer>
+    © 2026 Spawt · Yasser Boutarf
+  </footer>
 
 </body>
 </html>
